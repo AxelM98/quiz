@@ -1,0 +1,91 @@
+body {
+  background-color: #003399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122_16x9.jpg");
+  background-size: cover;
+
+}
+
+.container {
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  background-color: gold;
+  width: 800px;
+  height: 500px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 50px;
+}
+
+.question {
+  font-size: 40px;
+}
+
+.answer {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.submit {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  border: none;
+  background-color: #964B00;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+.submit:hover {
+  background-color:#808000;
+  color: gold;
+}
+
+.result {
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+.result h1{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.correct{
+    color: green;
+}
+
+.wrong{
+color: red;    
+}
+
+.play{
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all .7s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.play:hover {
+    background-color: rgb(0, 109, 218);
+    transform: scale(1.1);
+  }
