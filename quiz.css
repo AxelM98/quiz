@@ -10,14 +10,13 @@ body {
 }
 
 .container {
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
   background-color: gold;
   width: 800px;
   height: 500px;
   position: relative;
   border-radius: 5px;
+  overflow: hidden;
+  opacity: .95;
 }
 
 .content {
