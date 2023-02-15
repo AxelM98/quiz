@@ -116,11 +116,29 @@ let wrongAnswersCount = 0;
 let total = 0;
 let selectedAnswer;
 
+// ProgressBar
+let totalQuestions = 10;
+let answeredQuestions = qIndex;
+let progress = (answeredQuestions / totalQuestions) * 100;
+let currentQuestion = -1;
+
+const progressBar = document.querySelector(".progressBar");
+
+function updateProgressBar() {
+  const percentage = (currentQuestion / data.length) * 100;
+  progressBar.style.width = `${percentage}%`;
+  progressBar.innerHTML = `${percentage}%`;
+  if (percentage === 0) {
+    progressBar.innerHTML = null;
+  }
+}
+
 const playAgain = () => {
   qIndex = 0;
   correctAnswersCount = 0;
   wrongAnswersCount = 0;
   total = 0;
+  currentQuestion = -1;
   showQuestion(qIndex);
 };
 
@@ -146,6 +164,8 @@ const showResult = () => {
 };
 
 const showQuestion = (qNumber) => {
+  currentQuestion++;
+  updateProgressBar();
   if (qIndex === data.length) return showResult();
   selectedAnswer = null;
   question.textContent = data[qNumber].question;

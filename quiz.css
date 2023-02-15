@@ -1,22 +1,22 @@
 body {
-  background-color: #003399;
+  background-color: #808000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
   background-image: url("https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122_16x9.jpg");
   background-size: cover;
-
+  position: relative;
 }
 
 .container {
   background-color: gold;
   width: 800px;
-  height: 500px;
+  height: 520px;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-  opacity: .95;
+  opacity: 0.95;
 }
 
 .content {
@@ -36,9 +36,9 @@ body {
 .submit {
   position: absolute;
   bottom: 0;
-  color: white;
+  color: gold;
   border: none;
-  background-color: #964B00;
+  background-color: #964b00;
   width: 100%;
   height: 50px;
   font-weight: bold;
@@ -49,7 +49,7 @@ body {
 }
 
 .submit:hover {
-  background-color:#808000;
+  background-color: #808000;
   color: gold;
 }
 
@@ -59,32 +59,62 @@ body {
   text-align: center;
 }
 
-.result h1{
-    font-size: 50px;
-    text-transform: uppercase;
+.result h1 {
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
-.correct{
-    color: green;
+.correct {
+  color: green;
 }
 
-.wrong{
-color: red;    
+.wrong {
+  color: red;
 }
 
-.play{
-    color: white;
-    background-color: dodgerblue;
-    border: none;
-    padding: 20px 40px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all .7s ease;
-    cursor: pointer;
-    text-transform: uppercase;
+.play {
+  color: gold;
+  background-color: rgb(194, 0, 0);
+  border: none;
+  padding: 20px 40px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .play:hover {
-    background-color: rgb(0, 109, 218);
-    transform: scale(1.1);
-  }
+  background-color: rgb(255, 0, 0);
+  transform: scale(1.1);
+}
+
+.progressBarContainer{
+  background-color: gold;
+  padding: 7px;
+  position: absolute;
+  bottom: 40px;
+  width: 780px;
+  border-radius: 3em;
+  overflow: hidden;
+  opacity: .95;
+}
+
+.progressBarWrapper{
+  width: calc(780px - 24px);
+}
+
+.progressBar {
+  background-color: #964b00;
+  transition: width 1s ease;
+  border-radius: 1.5em;
+  padding: 3px 12px;
+  color: gold;
+  font-weight: bold;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0%;
+  min-width: 2rem;
+}
